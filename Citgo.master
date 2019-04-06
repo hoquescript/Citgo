@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Citgo.master.cs" Inherits="MasterPage" %>
+<%@ Register TagName="Header" TagPrefix="uc1" Src="ucHeader.ascx" %>
+<%@ Register TagName="HeaderBar" TagPrefix="uc1" Src="ucHeaderBar.ascx" %>
+<%@ Register TagName="Footer" TagPrefix="uc1" Src="~/ucFooter.ascx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <!------------------------------------------------------------- Meta Data ------------------------------------------------------------->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CITGO Lubricants is one of the industry's broadest lines of protective white oils; including Synthetic, Food Grade and Environmental formulations.">
+    <meta name="keywords" content="CITGO Lubricants is one of the industry's broadest lines of protective white oils; including Synthetic, Food Grade and Environmental formulations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-------------------------------------------------------------- Icons ---------------------------------------------------------------->
+
+    <link rel="shortcut icon" href="https://www.citgolubes.com/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.citgolubes.com/images/icons/Icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.citgolubes.com/images/icons/Icon@2x.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.citgolubes.com/images/icnons/Icon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.citgolubes.com/images/icons/Icon-72@2x.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.citgolubes.com/images/icons/icon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.citgolubes.com/images/icons/icon-60@2x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.citgolubes.com/images/icons/Icon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.citgolubes.com/images/icons/Icon-76@2x">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.citgolubes.com/images/icons/Icon-60@3x.png">
+    <link rel="icon" type="image/png" href="https://www.citgolubes.com/images/icons/Icon192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://www.citgolubes.com/images/icons/Icon160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://www.citgolubes.com/images/icons/Icon96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://www.citgolubes.com/images/icons/Icon32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#aa0000">
+    <meta name="msapplication-TileImage" content="/images/icons/Icon-72@2x.png">
+
+    <!------------------------------------------------------------- CSS Files ------------------------------------------------------------->
+
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <link href="css/css_002.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/menu.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slippry.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/form.css">
+    <%--Bootstrap--%>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%--Footer--%>
+    <!---------------------------------------------------------- Java-Script Files -------------------------------------------------------->
+
+    <script type="text/javascript" async="" src="js/linkid.js"></script>
+    <script type="text/javascript" async="" src="js/analytics.js"></script>
+    <script async="" src="js/gtm.js"></script>
+    <script src="js/jquery_002.js"></script>
+    <script src="js/webslidemenu.js"></script>
+    <script src="js/jquery.js"></script>
+    <%--[If Internet Explorer is older than version 9.0]> <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>--%>
+    <%--Smooth Scroll JS--%>
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+
+
+        <!--Search Toggle JS  -- >
+
+                $('.toggleclick').click(function () {
+                    $('.searchdiv.toggle').fadeToggle('slow', function () {
+                        // Animation complete
+                    });
+                    $("#searchString").focus();
+                    return false;
+                });
+            $(document).click(function (e) {
+                if ($(e.target).is('.searchdiv.toggle,#searchString,.searchdiv *'))
+                    return false;
+                else
+                    $('.searchdiv.toggle').fadeOut('slow');
+            });
+        });
+    </script>
+    <%--Bootstrap--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Google Tag Manager -->
+            <script language="javascript">
+                var dnt = navigator.doNotTrack == "yes" || navigator.doNotTrack == "1" || navigator.msDoNotTrack == "1" || window.doNotTrack == "1";
+            </script>
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC3B7Z"
+                    height="0" width="0" style="display: none; visibility: hidden"></iframe>
+            </noscript>
+            <script>
+                if (!dnt) {
+                    (function (w, d, s, l, i) {
+                        w[l] = w[l] || []; w[l].push({
+                            'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                        }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                    })(window, document, 'script', 'dataLayer', 'GTM-MC3B7Z');
+                }</script>
+
+            <%--Header Bar--%>
+            <uc1:HeaderBar ID="HeaderBar2" runat="server"></uc1:HeaderBar>
+
+            <%--Header Menu--%>
+            <div class="wsmenucontainer clearfix">
+                <div class="overlapblackbg"></div>
+                <uc1:Header ID="Header2" runat="server"></uc1:Header>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <uc1:Footer ID="Footer2" runat="server"></uc1:Footer>
+        </div>
+    </form>
+     <!-- Parallax JS
+================================================== -->
+
+    <script src="js/stellar.js"></script>
+    <script>
+                $(function () {
+                    $.stellar({
+                        horizontalScrolling: false,
+                        verticalOffset: 40
+                    });
+                });
+    </script>
+
+    <!-- IE Smooth Scroll Fix  JS
+================================================== -->
+
+    <script>
+                if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
+                    $('body').on("mousewheel", function () {
+                        // remove default behavior
+                        event.preventDefault();
+
+                        //scroll without smoothing
+                        var wheelDelta = event.wheelDelta;
+                        var currentScrollPosition = window.pageYOffset;
+                        window.scrollTo(0, currentScrollPosition - wheelDelta);
+                    });
+                }
+
+    </script>
+</body>
+</html>

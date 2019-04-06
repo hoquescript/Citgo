@@ -1,0 +1,34 @@
+
+header, .one-half2, .redbox, .orangebox, .graybox, .taglineboximage, .wsmenu, footer, .footer2, .breadcrumbs  {display: none;}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {display: none;}
+
+.addtop, .addtop50, .addtop75, .addtop100 {padding-top: 10px;}
+.addbottom, .addbottom50, .addbottom75, .addbottom100 {padding-bottom: 10px;}
+
+.calcResultsText {
+    font-size: 30px;
+    color: #c10000;
+}
+
+
+/*---------------------------------- Tablet View Portrait CSS ---------------------------------------*/
+@media only screen and (min-width:768px) and (max-width:1028px) {
+
+
+}
+
+
+
+/*--------------------------------------- Mobile CSS ---------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+
+}
+
+
+/*--------------------------------------- Mobile CSS ---------------------------------------------*/
+@media only screen and (max-width: 480px) {
+	
+
+}
